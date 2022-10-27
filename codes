@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int fiyat;
+char secenek;
+cout<<"Reklam icin (R) ,Dizi/Film için (D) giriniz :";
+cin>>secenek;
+ 
+ if (secenek=='R')
+ {
+ int sure;
+ char zamandilimi;
+ cout<<"Reklam suresini giriniz :";
+ cin>>sure;
+ cout<<"Reklamin zaman dilimini giriniz (S/A) :";
+ cin>>zamandilimi;
+ cout<<"Reklamin fiyati :";
+ if (zamandilimi=='S')
+ {
+ fiyat = sure*20000;
+ cout<<fiyat<<endl;
+}
+ else if (zamandilimi=='A')
+ {
+ fiyat = sure*40000;
+ cout<<fiyat<<endl;
+ }
+}
+ else if (secenek=='D')
+ {
+ int bsayisi,buzunlugu;
+ cout<<"Dizinin bolum sayisini giriniz :";
+ cin>>bsayisi;
+ cout<<"Bolumun uzunlugunu giriniz (30-60):";
+ cin>>buzunlugu;
+ cout<<"Dizinin fiyati :";
+ if(buzunlugu==30)
+ {
+ fiyat = bsayisi*50000;
+ cout<<fiyat<<endl;
+ }
+ else if(buzunlugu==60)
+ {
+ fiyat = bsayisi *100000;
+ cout<<fiyat<<endl;
+ }
+ }
+return 0;
+}
